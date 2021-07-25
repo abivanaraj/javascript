@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.0.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</head>
+
+<body class="bg-secondary">
+    <div class="container">
+
+        <div class="row">
+            <ul class="nav nav-pills nav-fill">
+
+                <div class="col mt-4 mx-3">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" id="home" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                            title="HOME" href="navs.html">Home</a>
+                    </li>
+                </div>
+
+                <div class="col mt-4 mx-3">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" id="about" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                            title="ABOUT" href="#">About</a>
+                    </li>
+                </div>
+
+                <div class="col mt-4 mx-3">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" id="contact" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                            title="CONTACT" href="#">Contact</a>
+                    </li>
+                </div>
+
+                <div class="col mt-4 mx-3">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" id="services" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                            title="SERVICES" href="#" tabindex="-1" aria-disabled="true">Services</a>
+                    </li>
+                </div>
+            </ul>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col">
+                <ul class="dropdown-menu bg-danger" id="dropdown-menu-home" role="menu">
+                    <li><a class="dropdown-item text-primary" href="home1.html">home 1</a></li>
+                    <li><a class="dropdown-item text-primary" href="#">home 2</a></li>
+                    <li><a class="dropdown-item text-primary" href="#">home 3</a></li>
+                </ul>
+            </div>
+
+            <div class="col">
+                <ul class="dropdown-menu bg-danger" id="dropdown-menu-about" role="menu">
+                    <li><a class="dropdown-item text-primary" href="about1.html">about 1</a></li>
+                    <li><a class="dropdown-item text-primary" href="#">about 2</a></li>
+                    <li><a class="dropdown-item text-primary" href="#">about 3</a></li>
+                </ul>
+            </div>
+
+            <div class="col">
+                <ul class="dropdown-menu bg-danger" id="dropdown-menu-contact" role="menu">
+                    <li><a class="dropdown-item text-primary" href="#">contact 1</a></li>
+                    <li><a class="dropdown-item text-primary" href="#">contact 2</a></li>
+                    <li><a class="dropdown-item text-primary" href="#">contact 3</a></li>
+                </ul>
+            </div>
+
+            <div class="col">
+                <ul class="dropdown-menu bg-danger" id="dropdown-menu-services" role="menu">
+                    <li><a class="dropdown-item text-primary" href="#">services 1</a></li>
+                    <li><a class="dropdown-item text-primary" href="#">services 2</a></li>
+                    <li><a class="dropdown-item text-primary" href="#">services 3</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row mt-3" style="height: 700px">
+            <p class="bg-white w-100 display-6">THIS IS ABOUT 1 PAGE</p>
+        </div>
+    </div>
+
+
+
+    <script>
+        $(document).ready(function () {
+            $('#dropdown-menu-home').hide()
+            $('#dropdown-menu-about').hide()
+            $('#dropdown-menu-contact').hide()
+            $('#dropdown-menu-services').hide()
+
+            $('#home').mouseenter(function () {
+                $('#home').addClass("bg-primary text-white");
+            })
+            $('#home').mouseleave(function () {
+                $('#home').removeClass();
+            })
+
+            $('#about').mouseenter(function () {
+                $('#about').addClass("bg-primary text-white");
+            })
+            $('#about').mouseleave(function () {
+                $('#about').removeClass();
+            })
+
+            $('#contact').mouseenter(function () {
+                $('#contact').addClass("bg-primary text-white");
+            })
+            $('#contact').mouseleave(function () {
+                $('#contact').removeClass();
+            })
+
+            $('#services').mouseenter(function () {
+                $('#services').addClass("bg-primary text-white");
+            })
+            $('#services').mouseleave(function () {
+                $('#services').removeClass();
+            })
+
+            $('#home').mouseenter(function () {
+                $('#dropdown-menu-home').show()
+                $('#dropdown-menu-about').hide()
+                $('#dropdown-menu-contact').hide()
+                $('#dropdown-menu-services').hide()
+
+            })
+
+            $('#about').mouseover(function () {
+                $('#dropdown-menu-about').show()
+                $('#dropdown-menu-home').hide()
+                $('#dropdown-menu-contact').hide()
+                $('#dropdown-menu-services').hide()
+
+            })
+
+            $('#contact').mouseover(function () {
+                $('#dropdown-menu-contact').show()
+                $('#dropdown-menu-about').hide()
+                $('#dropdown-menu-home').hide()
+                $('#dropdown-menu-services').hide()
+
+            })
+
+            $('#services').mouseover(function () {
+                $('#dropdown-menu-services').show()
+                $('#dropdown-menu-contact').hide()
+                $('#dropdown-menu-about').hide()
+                $('#dropdown-menu-home').hide()
+
+            })
+
+            $('#dropdown-menu-home').mouseleave(function () {
+                $('#dropdown-menu-home').hide()
+            })
+            $('#dropdown-menu-about').mouseleave(function () {
+                $('#dropdown-menu-about').hide()
+            })
+            $('#dropdown-menu-contact').mouseleave(function () {
+                $('#dropdown-menu-contact').hide()
+            })
+            $('#dropdown-menu-services').mouseleave(function () {
+                $('#dropdown-menu-services').hide()
+            })
+        })
+    </script>
+</body>
+
+</html>
